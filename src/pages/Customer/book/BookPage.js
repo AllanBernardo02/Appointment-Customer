@@ -23,6 +23,8 @@ class BookPage extends BaseListPage {
     this.presenter.onClickItem(index, field);
   }
   render() {
+    const schema = this.getSchema(this.getCollectionName());
+    console.log("Schema", schema);
     const doctor = this.state.objects;
     console.log("Doctor:", doctor);
     return (
@@ -34,15 +36,21 @@ class BookPage extends BaseListPage {
               Appoint your Schedule Here!
             </h1>
             <Search
+              schemas={this.getSchemas()}
               className="mt-3"
-              //   onSubmit={this.searchSubmit.bind(this)}
-              //   fields={schema.fields}
+              onSubmit={this.searchSubmit.bind(this)}
+              fields={schema.fields}
             />
           </div>
 
           <div
             className="doctor-container"
-            style={{ display: "flex", flexWrap: "wrap" }}
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
           >
             {doctor.map((doc, index) => {
               return (
@@ -51,14 +59,10 @@ class BookPage extends BaseListPage {
                   style={{ flex: "0 0 30%", margin: "10px" }}
                 >
                   <div className="doctor-chat">
-                    <h1 className="card-title">
+                    <h2 className="card-title">
                       {/* {doctor.firstname} {doctor.lastname} */}
                       {doc["firstName"]} {doc["lastName"]}
-                    </h1>
-                    {/* <MessageOutlined
-              style={{ fontSize: "20px" }}
-              onClick={() => chatDoctor(doctor._id)}
-               /> */}
+                    </h2>
                   </div>
                   <hr />
                   <p>
