@@ -138,6 +138,7 @@ class MedicalRecordPage extends BaseListPage {
     const { objects } = this.state;
     const schema = this.getSchema("patient");
     console.log("objects:", schema);
+    console.log("objectsss:", schema);
     return (
       <>
         <NavBar className="shadow-sm" />
