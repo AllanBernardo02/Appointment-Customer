@@ -73,6 +73,16 @@ class SignUpPage extends BasePage {
                         />
                       </div>
                       <div className="col-md-12">
+                        <label className="form-label fs-sm">Username</label>
+                        <InputFactory
+                          onChange={this.onChange.bind(this, "username")}
+                          type="String"
+                          className="form-control"
+                          placeholder="e.g Cruz"
+                          required
+                        />
+                      </div>
+                      <div className="col-md-12">
                         <label className="form-label fs-sm">
                           Email Address
                         </label>

@@ -4,6 +4,7 @@ import { Button, Search } from "nq-component";
 import BaseListPage from "../../../base/BaseListPage";
 import BookPresenter from "./BookPresenter";
 import { findObjectUseCase } from "../../../usecases/object";
+import withRouter from "../../../withRouter";
 
 class BookPage extends BaseListPage {
   constructor(props) {
@@ -107,4 +108,4 @@ class BookPage extends BaseListPage {
   }
 }
 
-export default BookPage;
+export default withRouter(BookPage);

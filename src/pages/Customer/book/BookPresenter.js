@@ -19,12 +19,9 @@ class BookPresenter extends BaseListPresenter {
     };
     this.view.showProgress();
     try {
-      const { count, objects } = await this.findObjectUseCase.execute(
-        collection,
-        query
-      );
+      const objects = await this.findObjectUseCase.execute(collection, query);
       this.objects = this.objects.concat(objects);
-      this.view.setCount(count);
+      // this.view.setCount(count);
       this.view.setObjects(this.objects);
     } catch (error) {
       this.view.showError(error);
