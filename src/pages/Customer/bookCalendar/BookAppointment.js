@@ -142,11 +142,7 @@ class BookAppointment extends BaseListPage {
 
   render() {
     const getTime = this.state.objects;
-    console.log("get", getTime);
-    const id = this.getParams();
-    console.log("data", getTime);
 
-    console.log("iddd", id);
     return (
       <>
         <NavBar />
