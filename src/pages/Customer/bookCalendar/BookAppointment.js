@@ -141,8 +141,6 @@ class BookAppointment extends BaseListPage {
   };
 
   render() {
-    const getTime = this.state.objects;
-
     return (
       <>
         <NavBar />

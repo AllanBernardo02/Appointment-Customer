@@ -25,9 +25,9 @@ class BookPage extends BaseListPage {
   }
   render() {
     const schema = this.getSchema(this.getCollectionName());
-    console.log("Schema", schema);
+
     const doctor = this.state.objects;
-    console.log("Doctor:", doctor);
+
     return (
       <>
         <NavBar />
