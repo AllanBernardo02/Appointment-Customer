@@ -1,12 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import BaseListPage from "../../../base/BaseListPage";
 import BookAppointmentPresenter from "./BookAppointmentPresenter";
 import { findObjectUseCase } from "../../../usecases/object";
-import BaseFormPresenter from "../../../base/BaseFormPresenter";
 import NavBar from "../../../components/navbar";
 import withRouter from "../../../withRouter";
-import { Modal, Calendar } from "antd";
-import { Button, dialog } from "nq-component";
+import { Calendar } from "antd";
+import { dialog } from "nq-component";
 
 class BookAppointment extends BaseListPage {
   constructor(props) {
